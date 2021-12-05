@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  font-family: "Fira Code", monospace;
+}
+
+.square {
+  border-radius: 0px;
+}
+
+.jumbotron {
+  background-image: linear-gradient(to right, #007bff, #000);
+  color: white;
+}
+
+.align-center {
+  align-content: center;
+}
