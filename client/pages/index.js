@@ -1,14 +1,12 @@
-import TopNav from "../components/TopNav";
-
 const Index = () => {
   return (
     <>
-      <TopNav />
       <h1 className="jumbotron text-center bg-primary square">
-        Online Education Platform
+        Online Education Marketplace
       </h1>
-      <p>from nextjs...</p>
+      <p>from next js...</p>
     </>
   );
 };
+
 export default Index;

@@ -1,7 +1,7 @@
 import User from "../models/user";
 import { hashPassword, comparePassword } from "../utils/auth";
 
-export const register = async (req, res) => {
+const register = async (req, res) => {
   try {
     //first make sure that we are receiving data from front-end
     //console.log(req.body);
@@ -37,3 +37,5 @@ export const register = async (req, res) => {
     return res.status(400).send("Error. Try again.");
   }
 };
+
+module.exports = register;

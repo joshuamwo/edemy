@@ -1,13 +1,8 @@
-import express from "express";
-
+const express = require("express");
 const router = express.Router();
+const register = require("../controllers/auth");
 
-//controllers
-import { register } from "../controllers/auth";
+router.route("/register").post(register);
+console.log(register);
 
-//routes
-
-router.post("/register", register);
-
-//native way of exporting router in nodeJs
 module.exports = router;

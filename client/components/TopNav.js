@@ -13,18 +13,19 @@ const TopNav = () => {
     <Menu mode="horizontal">
       <Item icon={<AppstoreOutlined />}>
         <Link href="/">
-          <a className="typewriter">App</a>
+          <a>App</a>
         </Link>
       </Item>
 
       <Item icon={<LoginOutlined />}>
         <Link href="/login">
-          <a className="typewriter">Login</a>
+          <a>Login</a>
         </Link>
       </Item>
+
       <Item icon={<UserAddOutlined />}>
         <Link href="/register">
-          <a className="typewriter">Register</a>
+          <a>Register</a>
         </Link>
       </Item>
     </Menu>

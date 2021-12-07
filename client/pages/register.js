@@ -1,16 +1,15 @@
-import TopNav from "../components/TopNav";
 import { useState } from "react";
 import axios from "axios";
 
 const Register = () => {
   const [name, setName] = useState("josh");
   const [email, setEmail] = useState("josh@gmail.com");
-  const [password, setPassword] = useState("josh");
+  const [password, setPassword] = useState("yullujosh");
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); //so that the page does not reload onSubmit
-    console.table({ name, email, password });
-    const { data } = await axios.post(`http://localhost:8000/api/register`, {
+    e.preventDefault();
+    //console.table({ name, email, password });
+    const { data } = await axios.post(`http://localhost:8001/auth/register`, {
       name,
       email,
       password,
@@ -20,7 +19,6 @@ const Register = () => {
 
   return (
     <>
-      <TopNav />
       <h1 className="jumbotron text-center bg-primary square">Register</h1>
 
       <div className="container col-md-4 offset-md-4 pb-5">
@@ -30,7 +28,7 @@ const Register = () => {
             className="form-control mb-4 p-4"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            placeholder="Enter Name"
+            placeholder="Enter name"
             required
           />
 
@@ -39,7 +37,7 @@ const Register = () => {
             className="form-control mb-4 p-4"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter Email"
+            placeholder="Enter email"
             required
           />
 
@@ -48,15 +46,11 @@ const Register = () => {
             className="form-control mb-4 p-4"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            placeholder="Enter Password"
+            placeholder="Enter password"
             required
           />
-          <br />
 
-          <button
-            type="submit"
-            className="btn btn-primary align-center btn-block"
-          >
+          <button type="submit" className="btn btn-block btn-primary">
             Submit
           </button>
         </form>
