@@ -9,12 +9,21 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     //console.table({ name, email, password });
-    const { data } = await axios.post(`http://localhost:8001/auth/register`, {
-      name,
-      email,
-      password,
-    });
-    console.log("REGISTER RESPONSE", data);
+    await axios
+      .post(`http://localhost:8000/auth/register`, {
+        name,
+        email,
+        password,
+      })
+      .then(
+        (response) => {
+          var result = response.data;
+          console.log(result);
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
   };
 
   return (
